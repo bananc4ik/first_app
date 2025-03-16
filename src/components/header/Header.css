@@ -1,0 +1,18 @@
+.header_box1{
+    background-color: black;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    height: 38px;
+
+}
+.header_box1_title p{
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.header_box1_title p a{
+    color: #FFFFFF;
+}
