@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderLogo from '../../images/HeaderImages/SHOP.CO (1).svg'
 import HeaderListImage from '../../images/HeaderImages/Frame (1).svg'
+import HeaderStyles from './Header2.css';
 const Header2 = () =>{
     return(
         
@@ -20,7 +21,7 @@ const Header2 = () =>{
 
             <p>Brands</p>
 
-            <input type="text" />
+            <input className='col-lg-6' placeholder='Search for products...' id='header_input' type="text" />
 
         </div>
 
