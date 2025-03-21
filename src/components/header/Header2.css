@@ -9,8 +9,34 @@
     border-style: none;
     background-image: url('../../images/HeaderImages/InputImage.svg');
     background-repeat: no-repeat;
-    background-position:left 10px ;
+    background-position:left;
+    padding-left: 40px;
+    
+
     
 
     
 }
+.header2_box{
+   gap: 40px;
+}
+
+.header2_box p{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.header_panel{
+    padding: 0px;
+    gap: 40px;
+}
+
+
+
+
+
+
