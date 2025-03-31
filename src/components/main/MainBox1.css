@@ -1,0 +1,79 @@
+.MainBox1_1 ,.MainBox1_2{
+    background-color: #F2F0F1;
+}
+
+.MainBox1_1{
+    padding-left: 95px;
+}
+
+.MainBox1_title{
+    padding-top: 103px;
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.MainBox1_description{
+
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+
+
+}
+
+.MainBox1_button{
+    margin-top: 32px;
+
+    padding: 16px 54px;
+    gap: 12px;
+    background: #000000;
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    border-style: none;
+
+
+
+}
+
+.MainBox1_cards{
+    gap: 64px;
+}
+
+.MainBox1_card_title{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+.MainBox1_card_description{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+
+
+}
+
+
