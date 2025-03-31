@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ExitImage from '../../images/HeaderImages/Frame.svg';
-import HeaderStyle from './Header.css';
+import './Header.css';
 import useEfect from 'react'
 const Header = () =>{
 
@@ -13,7 +13,7 @@ const Header = () =>{
                 <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
             </div>
             <div className="col-1 justify-content-center">
-                <img id='exit_header' src={ExitImage} alt=""></img>
+                <input id='exit_header' type='image'src={ExitImage} alt="" />
             </div>
            
         </div>

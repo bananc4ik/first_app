@@ -13,7 +13,7 @@ const MainBox1 = () =>{
 
 
 
-                <div className="MainBox1_1 col-lg-6">
+                <div className="MainBox1_1 ps-5 col-lg-6">
 
                     <p className="MainBox1_title">FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE</p>
                     <p className="col-lg-8 MainBox1_description">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
@@ -55,7 +55,7 @@ const MainBox1 = () =>{
 
 
 
-                <div className="d-flex justify-content-end col-lg-6 MainBox1_2" >
+                <div className="d-flex justify-content-end col-lg-6 pe-5 MainBox1_2" >
                     <img className="" src={MainBox1_image} alt="" />
                 </div>
 
