@@ -2,9 +2,17 @@
     background-color: #F2F0F1;
 }
 
+.Main_box1_container{
+    background-color: #F2F0F1;
+}
+
+.MainBox1_1{
+    z-index: 1;
+
+}
 
 .MainBox1_title{
-    padding-top: 103px;
+    padding-top: 10vh;
     font-family: 'Integral CF';
     font-style: normal;
     font-weight: 700;
@@ -13,6 +21,9 @@
     display: flex;
     align-items: center;
     color: #000000;
+
+
+
 }
 
 .MainBox1_description{
@@ -47,9 +58,12 @@
 }
 
 .MainBox1_cards{
-    gap: 64px;
+    padding-top: 48px;
+    padding-bottom: 116px;
 }
-
+.MainBox1_card{
+    margin-right: 64px;
+}
 .MainBox1_card_title{
     font-family: 'Satoshi';
     font-style: normal;
@@ -72,5 +86,19 @@
 
 
 }
+
+.MainBox1_1{
+    z-index: 1;
+}
+
+.MainBox1_2 img{
+    z-index: 1;
+
+}
+
+.Brands{
+    background-color: #000000;
+}
+
 
 
