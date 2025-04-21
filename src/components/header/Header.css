@@ -8,6 +8,10 @@
     height: 38px;
 
 }
+
+.hidden{
+    display: none;
+}
 .header_box1_title p{
     margin: 0;
     color: #FFFFFF;

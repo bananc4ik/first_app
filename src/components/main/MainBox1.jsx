@@ -57,8 +57,8 @@ const MainBox1 = () =>{
 
 
 
-                <div className="d-flex align-items-end col-xl-6 col-lg-12 col-sm-12 col-sm-12 justify-content-lg-end  MainBox1_2" >
-                    <img className="col-12 col-xl-6 col-sm-12" src={MainBox1_image} alt="" />
+                <div className="d-flex align-items-end col-xl-6 col-lg-12 col-sm-12 col-sm-12 justify-content-lg-end  MainBox1_2 " >
+                    <img className="col-12 col-xl-12 col-sm-12" src={MainBox1_image} alt="" />
                 </div>
                     
                 

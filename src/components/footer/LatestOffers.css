@@ -1,0 +1,56 @@
+.latest_offers_box{
+    position:relative;
+    padding: 36px 64px;
+    gap: 153px;
+    background: #000000;
+    border-radius: 20px;
+    top: 50px;
+
+}
+
+.latest_offers_title{
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #FFFFFF;
+
+}
+
+.latest_offers_box2{
+    padding: 0px;
+    gap: 14px;
+
+
+}
+
+.latest_offers_email_input{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+    background: #FFFFFF;
+    border-radius: 62px;
+
+
+}
+.latest_offers_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+    background: #FFFFFF;
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+
+
+}
