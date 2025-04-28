@@ -13,12 +13,15 @@ const ReviewsComponent = () =>{
 
     useEffect(() => {
         dispatch(fetchReviews());
-        console.log(reviewsFromApi);
-        
+    
     }, [dispatch]);
     
 
-    
+    useEffect(() => {
+        console.log(reviewsFromApi);
+        
+    }, [reviewsFromApi]);
+
 
     
     

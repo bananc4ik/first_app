@@ -6,8 +6,6 @@ export const initialState = {
 export const fetchReviews = createAsyncThunk("/shopco/reviews", async () => {
 
     let reviewsResponse = await fetch("https://jjwjw.wiremockapi.cloud/shopco/reviews");
-    reviewsResponse = await reviewsResponse.json();
-
     return await reviewsResponse.json();
 
 
