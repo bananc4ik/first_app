@@ -5,14 +5,14 @@ import MainBox1 from '../components/main/MainBox1';
 import TypesClothing from '../components/main/TypesClothing';
 import LatestOffers from '../components/footer/LatestOffers';
 import Footer from '../components/footer/footer';
-import ReviewsComponent from '../components/main/ReviewsComponent';
+import ReviewsComponent from '../components/main/reviews/ReviewsComponent';
 const HomePage = () =>{
     return(
         <div className='home_page'>
             <Header/>
             <Header2/>
             <MainBox1/>
-            <ReviewsComponent/>
+            <ReviewsComponent />
             <TypesClothing/>
             <LatestOffers/>
             <Footer/>

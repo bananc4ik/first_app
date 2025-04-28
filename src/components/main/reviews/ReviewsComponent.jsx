@@ -9,14 +9,14 @@ const ReviewsComponent = () =>{
 
     const dispatch = useDispatch();
 
-    const reviews = useSelector((state) => state.reviews.reviewsList);
+    const reviewsFromApi = useSelector((state) => state.reviews.reviewsList);
 
     useEffect(() => {
         dispatch(fetchReviews());
     }, [dispatch]);
     
     
-    console.log(reviews);
+    console.log(reviewsFromApi);
     
     
 

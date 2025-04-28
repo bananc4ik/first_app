@@ -29,4 +29,4 @@ const getReviews = createSlice({
 
 })
 
-export default getReviews.reducer
+export default getReviews.extraReducers;
