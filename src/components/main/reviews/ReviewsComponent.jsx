@@ -1,18 +1,22 @@
-import react from "react";
-import { useDispatch } from "react-redux";
-import {fetchReviews} from '../../app/reviewsSlice'
-import reviewsList from '../../app/reviewsSlice';
+import react, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReviews } from "../../../app/reviewsSlice";
+
+
 
 
 const ReviewsComponent = () =>{
 
     const dispatch = useDispatch();
 
-    let a = dispatch(fetchReviews())
+    const reviews = useSelector((state) => state.reviews.reviewsList);
 
-    console.log(a);
+    useEffect(() => {
+        dispatch(fetchReviews());
+    }, [dispatch]);
     
     
+    console.log(reviews);
     
     
 

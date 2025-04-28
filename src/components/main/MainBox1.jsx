@@ -26,23 +26,23 @@ const MainBox1 = () =>{
                     </div>
                     
 
-                    <div className="d-flex content-left justify-content-center justify-content-xl-start justify-content-sm-center align-items-center ms-xl-0 ms-sm-5 flex-row flex-wrap  MainBox1_cards">
+                    <div className="d-flex  col-12 justify-content-center justify-content-xl-start justify-content-sm-center align-items-center ms-4 flex-row flex-wrap  MainBox1_cards">
 
-                        <div className=" col-xl-2 col-sm-6 d-flex flex-column  MainBox1_card">
+                        <div className=" col-xl-2 col-3 d-flex flex-column  MainBox1_card">
 
                             <p className="MainBox1_card_title">200+</p>
                             <p className="MainBox1_card_description">International Brands</p>
 
                         </div>
 
-                        <div className="col-xl-2 col-sm-3  d-flex flex-column MainBox1_card">
+                        <div className="col-xl-2 col-3  d-flex flex-column MainBox1_card">
 
                             <p className="MainBox1_card_title ">2,000+</p>
                             <p className="MainBox1_card_description">High-Quality Products</p>
 
                         </div>
 
-                        <div className="col-xl-2 col-sm-3 d-flex flex-column MainBox1_card">
+                        <div className="col-xl-2 col-3 d-flex flex-column MainBox1_card">
 
                             <p className="MainBox1_card_title">30,000+</p>
                             <p className="MainBox1_card_description">Happy Customers</p>
