@@ -16,6 +16,7 @@ const HomePage = () =>{
             <TypesClothing/>
             <LatestOffers/>
             <Footer/>
+            <ReviewsComponent/>
             
             
         </div>

@@ -1,7 +1,7 @@
 import react, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReviews } from "../../../app/reviewsSlice";
-
+import ReviewComponent from './ReviewComponent'
 
 
 
@@ -25,6 +25,7 @@ const ReviewsComponent = () =>{
 
     
     
+    
 
 
     return(
@@ -33,8 +34,22 @@ const ReviewsComponent = () =>{
             <div className="row">
 
                 <div>
+                    
+                    <p></p>
 
-                    <div className="review">
+
+                    <div className="reviews_box " style={{height: 200}}>
+
+                        {reviewsFromApi.forEach(element => {
+                            <ReviewComponent key={element.id} review={element}/> 
+                        
+                        })}
+                        
+
+
+
+
+
 
                     </div>
 
