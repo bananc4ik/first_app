@@ -2,6 +2,7 @@ import react from "react";
 import ReviewComponentStyles from './ReviewStyles.css';
 import ReviewsUserVerivied from './Frame.svg';
 
+
 const ReviewComponent = ({review}) =>{
     return(
 

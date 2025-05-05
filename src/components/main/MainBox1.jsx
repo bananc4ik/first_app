@@ -26,7 +26,7 @@ const MainBox1 = () =>{
                     </div>
                     
 
-                    <div className="d-flex  col-12 justify-content-center justify-content-xl-start justify-content-sm-center align-items-center ms-4 flex-row flex-wrap  MainBox1_cards">
+                    <div className="d-flex  col-12 justify-content-center justify-content-xl-start align-items-center flex-row flex-wrap  MainBox1_cards">
 
                         <div className=" col-xl-2 col-3 d-flex flex-column  MainBox1_card">
 
