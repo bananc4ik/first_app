@@ -1,28 +1,50 @@
 import react from "react";
-import ReviewComponentStyles from './ReviewComponent.css'
+import ReviewComponentStyles from './ReviewStyles.css';
 import ReviewsUserVerivied from './Frame.svg';
 
 const ReviewComponent = ({review}) =>{
     return(
 
-        <div>
+        <div className=" d-flex flex-column review_box col-4 ">
 
-            <div className="revives_rating">
+            <div>
 
-                <p>{"⭐️".repeat(review.rating)}</p>
+                <div className="revives_rating">
+
+                    <p>{"⭐️".repeat(review.rating)}</p>
   
-            </div> 
+                </div> 
 
-            <div className="user_name">
-                <p>{review.user}</p>
-                <img src={ReviewsUserVerivied} alt="" />   
+
+            
             </div>
 
-            <div className="reviews_description">
 
-                {review.comment}
 
-            </div>           
+
+
+            <div className="d-flex flex-column review_box2">
+
+
+                <div className="user_name d-flex">
+                    <p>{review.user}</p>
+                    <img src={ReviewsUserVerivied} alt="" />   
+                </div>
+                
+                
+
+                
+
+                <div className="reviews_description">
+
+                    {review.comment}
+
+                </div>
+
+            </div>
+
+
+                       
 
         </div>
     )   
