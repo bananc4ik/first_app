@@ -6,7 +6,7 @@ import ReviewsUserVerivied from './Frame.svg';
 const ReviewComponent = ({review}) =>{
     return(
 
-        <div className=" d-flex flex-column review_box col-4 ">
+        <div className=" d-flex flex-column review_box col-12 d-flex justify-content-center ">
 
             <div>
 

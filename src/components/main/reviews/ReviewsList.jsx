@@ -37,9 +37,22 @@ const ReviewsList = () => {
 
             <div className="row">
 
-                <div>
+                <div >
 
                     <p className="reviews_title">OUR HAPPY CUSTOMERS</p>
+
+                    <div className="d-flex justify-content-end ">
+
+                        <div>
+                        
+                            <button className="swiper-button-prev">←к</button>
+                            <button className="swiper-button-next">→к</button>
+
+                        </div>
+                    
+                        
+
+                    </div>
 
 
 
@@ -48,9 +61,12 @@ const ReviewsList = () => {
                     <div className="reviews_box d-flex flex-wrap">
 
                         <Swiper
-                            modules={[Navigation, Pagination]}
-                            navigation
-                            pagination={{ clickable: true }}
+                            modules={[Navigation]}
+                            navigation = {{
+                                nextEl: 'swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            }}
+                            
                             spaceBetween={20}
                             slidesPerView={3}
                             breakpoints={{
