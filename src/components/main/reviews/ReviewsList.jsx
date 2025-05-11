@@ -5,6 +5,8 @@ import ReviewComponent from './ReviewComponent';
 import ReviewsStyles from './ReviewsListStyles.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import reviewsImageLeft from '../../../images/MainImages/arrow-down-bold 2.svg';
+import reviewsImageRight from '../../../images/MainImages/arrow-down-bold 1.svg';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -45,8 +47,8 @@ const ReviewsList = () => {
 
                         <div>
                         
-                            <button className="swiper-button-prev">←к</button>
-                            <button className="swiper-button-next">→к</button>
+                            <button className="swiper_button_prev reviews_button"><img src={reviewsImageLeft} alt="" /></button>
+                            <button className="swiper_button_next reviews_button"><img src={reviewsImageRight} alt="" /></button>
 
                         </div>
                     
@@ -63,8 +65,8 @@ const ReviewsList = () => {
                         <Swiper
                             modules={[Navigation]}
                             navigation = {{
-                                nextEl: 'swiper-button-next',
-                                prevEl: '.swiper-button-prev',
+                                nextEl: '.swiper_button_next',
+                                prevEl: '.swiper_button_prev',
                             }}
                             
                             spaceBetween={20}

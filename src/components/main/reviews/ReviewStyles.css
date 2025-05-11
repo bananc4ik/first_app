@@ -58,7 +58,11 @@
 
 }
 
-
+.reviews_button{
+    background: none;
+    border-style: none;
+    border: none;
+}
 
 
 
