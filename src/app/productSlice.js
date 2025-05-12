@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchReviews } from "./reviewsSlice";         
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";      
 export const initialState = {
     productsList:[],
 }
@@ -15,7 +14,7 @@ const getProducts = createSlice({
     reducers:{},
 
     extraReducers: (builder) => {
-        builder.addCase(fetchReviews.fulfilled,(state,action) => {
+        builder.addCase(fetchProducts.fulfilled,(state,action) => {
             state.productsList = action.payload;
             console.log(state.productsList);
             
