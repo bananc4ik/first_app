@@ -1,0 +1,29 @@
+.newarrivals{
+
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000000;
+    padding-top: 72px;
+    padding-bottom: 89px;
+
+
+}
+
+.view_all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 54px;
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 62px;
+    align-self: center;
+    margin-top: 34px;
+    margin-bottom: 64px;
+    
+
+}

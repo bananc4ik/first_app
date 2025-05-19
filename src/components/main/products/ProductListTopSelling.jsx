@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../app/productSlice";
 import ProductComponent from './ProductComponent';
 import ProductsListStyles from './ProductsList.css';
-const ProductsList = () =>{
+const ProductsListTopSelling = () =>{
 
     const dispatch = useDispatch();
 
@@ -17,13 +17,13 @@ const ProductsList = () =>{
 
     return(
 
-        <div className="d-flex flex-column justify-content-center">
+        <div className="col-12 d-flex flex-column justify-content-center">
 
-            <p className=" text-center newarrivals">NEW ARRIVALS</p>
+            <p className=" text-center newarrivals">TOP SELLING</p>
 
             <div className="d-flex container-fluid  align-items-center justify-content-center">
             
-            {productsFromApi.slice(0,4).map((product) => (
+            {productsFromApi.slice(5,9).map((product) => (
                                 
                 <ProductComponent  key={product.id }product={product} />
                                 
@@ -33,11 +33,11 @@ const ProductsList = () =>{
 
             <button className="col-2 view_all">View All</button>
 
-            <hr />
+            
 
         </div>        
         
     )
 }
 
-export default ProductsList;
+export default ProductsListTopSelling;

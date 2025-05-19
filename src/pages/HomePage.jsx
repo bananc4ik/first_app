@@ -7,6 +7,7 @@ import LatestOffers from '../components/footer/LatestOffers';
 import Footer from '../components/footer/footer';
 import ReviewsList from '../components/main/reviews/ReviewsList';
 import ProductsList from '../components/main/products/ProductsList';
+import ProductsListTopSelling from '../components/main/products/ProductListTopSelling';
 const HomePage = () =>{
     return(
         <div className='home_page'>
@@ -14,6 +15,7 @@ const HomePage = () =>{
             <Header2/>
             <MainBox1/>
             <ProductsList/>
+            <ProductsListTopSelling/>
             <TypesClothing/>
             <LatestOffers/>
             <ReviewsList/>
