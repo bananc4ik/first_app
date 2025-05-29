@@ -1,0 +1,69 @@
+.minor_path{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.main_path{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.detail_box{
+    padding-left: 40px;
+}
+
+.productCardDetailName{
+    font-family: 'Integral CF';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+
+
+}
+
+
+.color_button_box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+
+}
+
+.color_butoon1{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #4F4631;
+    border-style: none;
+}
+
+.color_butoon2{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #314F4A;
+    border-style: none;
+}
+
+
+.color_butoon3{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background: #462F47;
+    border-style: none;
+}

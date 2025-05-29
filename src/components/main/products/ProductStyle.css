@@ -40,3 +40,23 @@
 
 }
 
+.product_discount_percent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 14px;
+    gap: 12px;
+    background: rgba(255, 51, 51, 0.1);
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FF3333;
+
+
+
+}
+

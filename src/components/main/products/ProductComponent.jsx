@@ -2,7 +2,7 @@ import react from "react";
 import ProductStyles from "./ProductStyle.css";
 const ProductComponent = ({ product }) => {
   return (
-    <div className="col-3 d-flex flex-column justify-content-center ps-5  ">
+    <div className="col-12 d-flex flex-column justify-content-center ps-5  ">
       <div>
         <img className="col-11 product_images" src={product.image} alt="" />
       </div>
@@ -14,14 +14,16 @@ const ProductComponent = ({ product }) => {
 
         <div className="d-flex flex-row">
           {product.discount > 0 ? (
-            <div className="d-flex flex-row" style={{gap:10}}>
+            <div className="d-flex flex-row" style={{ gap: 10 }}>
               <p className="product_price">{product.price + "₽"}</p>
-
 
               <p className="product_price_with_discount">
                 {product.price -
                   ((product.price * product.discount) / 100).toFixed(2)}
                 ₽
+              </p>
+              <p className="product_discount_percent">
+                {product.discount + "%"}{" "}
               </p>
             </div>
           ) : (

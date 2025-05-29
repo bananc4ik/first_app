@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../app/productSlice";
 import ProductComponent from './ProductComponent';
 import ProductsListStyles from './ProductsList.css';
+import {Link} from "react-router-dom"
 const ProductsList = () =>{
 
     const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const ProductsList = () =>{
             
             {productsFromApi.slice(0,4).map((product) => (
                                 
-                <ProductComponent  key={product.id }product={product} />
+                <Link style={{textDecoration:"none"}} className="col-3"   to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
                                 
             ))}
 
@@ -41,3 +42,4 @@ const ProductsList = () =>{
 }
 
 export default ProductsList;
+
