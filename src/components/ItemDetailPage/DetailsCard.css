@@ -18,7 +18,6 @@
 }
 
 .detail_box{
-    padding-left: 40px;
 }
 
 .productCardDetailName{
@@ -66,4 +65,9 @@
     border-radius: 50%;
     background: #462F47;
     border-style: none;
+}
+
+
+.detail_box{
+    padding-top: 41px;
 }

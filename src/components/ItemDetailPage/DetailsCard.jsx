@@ -12,12 +12,12 @@ const DetailsCard = ({ product }) => {
         <p className="main_path">{product.name}</p>
       </div>
 
-      <div className="d-flex">
+      <div className="col-md-12 d-flex flex-lg-row flex-sm-column  flex-column detail_box" >
 
-        <div className="col-1 gap-xl-4 gap-xxl-5  d-flex flex-column ">
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
-          <img src={product.image} alt="" />
+        <div className="col-1 gap-lg-4 gap-xxl-5 gap-2 col-md-3  d-flex flex-lg-column flex-row ">
+          <img className="col-12"  src={product.image} alt="" />
+          <img className="col-12"  src={product.image} alt="" />
+          <img className="col-12" src={product.image} alt="" />
         </div>
 
         <div>
@@ -59,6 +59,21 @@ const DetailsCard = ({ product }) => {
               </div>
 
               <hr />
+
+
+              <div className="size_button">
+
+                {product.availableSizes.map(size =>{
+                  return<p>{size}</p>
+                }) }
+
+              </div>
+
+
+
+
+
+
             </div>
 
             <div></div>
