@@ -14,20 +14,19 @@ const DetailsCard = ({ product }) => {
 
       <div className="col-md-12 d-flex flex-lg-row flex-sm-column  flex-column detail_box" >
 
-        <div className="col-1 gap-lg-4 gap-xxl-5 gap-2 col-md-3  d-flex flex-lg-column flex-row ">
-          <img className="col-12"  src={product.image} alt="" />
-          <img className="col-12"  src={product.image} alt="" />
-          <img className="col-12" src={product.image} alt="" />
+        <div className="col-1 ps-5 gap-lg-4 gap-xxl-5 gap-2 col-md-2 d-flex flex-lg-column flex-row ">
+          <img className="col-11" src={product.image} alt="" />
+          <img className="col-11" src={product.image} alt="" />
+          <img className="col-11" src={product.image} alt="" />
         </div>
 
-        <div>
-
-          <div className="d-flex ps-5 ">
-            <div className="col-5 col-xxl-7">
-              <img   className="col-12" src={product.image} alt="" />
+        <div className="col-10 ps-0 detail_box_item_info">
+          <div className="d-flex col-10">
+            <div className="col-12 col-xxl-7">
+              <img className="col-7" src={product.image} alt="" />
             </div>
 
-            <div className="col-6 col-xxl-7 detail_box">
+            <div className="col-6 col-xxl-7 ps-4 detail_box">
               <p className="productCardDetailName">One Life Graphic T-shirt</p>
               <p>{"⭐️".repeat(product.rating)}</p>
 
@@ -63,9 +62,9 @@ const DetailsCard = ({ product }) => {
 
               <div className="size_button">
 
-                {product.availableSizes.map(size =>{
-                  return<p>{size}</p>
-                }) }
+                {product.availableSizes.map(size => {
+                  return <p>{size}</p>
+                })}
 
               </div>
 
@@ -75,13 +74,17 @@ const DetailsCard = ({ product }) => {
 
 
             </div>
-
-            <div></div>
           </div>
+
+
+
+
+
+          <div></div>
         </div>
-
-
       </div>
+
+
     </div>
   );
 };
