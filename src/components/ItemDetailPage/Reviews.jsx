@@ -4,55 +4,55 @@ import Faqs from "./Faqs";
 import { Button } from "bootstrap";
 const Reviews = () => {
 
-     const [click, setClick] = useState(0);
+  const [click, setClick] = useState(0);
 
-     const switchComponent = () =>{
-        switch (click) {
-            case 0:
-                console.log("aboba123");
-                
-                break;
-            case 1:
-                return <Faqs/>
+  const switchComponent = () => {
+    switch (click) {
+      case 0:
+        return <Faqs />
 
-        
-            default:
-                break;
-        }
+        break;
+      case 3:
+        return <Faqs />
+        break;
 
-     }
+      default:
+        break;
+    }
+
+  }
 
   return (
     <div>
       <div>
 
-        
-        
+
+
         <button onClick={() => setClick(1)}>
           <p>Product Detail</p>
           <hr />
         </button>
 
-        <div>
+        <button onClick={() => setClick(2)}>
           <p>Rating & Reviews</p>
           <hr />
-        </div>
+        </button>
 
-        <div>
+        <button onClick={() => setClick(3)}>
           <p>FAQs</p>
           <hr />
-        </div>
+        </button>
       </div>
 
 
       <div>
 
         {switchComponent()}
-        
-        
-        
-        
-        
+
+
+
+
+
       </div>
 
     </div>
