@@ -6,6 +6,7 @@ import Header_ICON_SHOP1 from '../../images/HeaderImages/SHOP.svg';
 import Header_Icon_Profile from '../../images/HeaderImages/Profile_image.svg';
 import Header_Search from '../../images/HeaderImages/HEADER_SEARCH.svg';
 import Menu from '../../images/HeaderImages/Header_Menu.svg';
+import {Link} from "react-router-dom";
 const Header2 = () =>{
     return(
         
@@ -13,7 +14,7 @@ const Header2 = () =>{
 
             <div className='d-flex justify-content-between col-lg-1 d-flex'>
                 <img className='col-3 col-sm-3 d-lg-none d-md-block ' src={Menu} alt="menu" />
-                <img className='col-lg-12 col-8 col-sm-8 d-lg-block d-md-block' src={HeaderLogo} alt="LOGO"/>
+                <Link to={`http://localhost:3000/`}><img className='col-lg-12 col-8 col-sm-8 d-lg-block d-md-block' src={HeaderLogo} alt="LOGO"/></Link>
 
             </div>
             

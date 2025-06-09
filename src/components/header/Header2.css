@@ -11,12 +11,11 @@
     background-repeat: no-repeat;
     background-position:10px;
     padding-left: 40px;
-    
-    
 
-    
+}
 
-    
+#header_input:hover{
+    border: 2px rgba(24, 24, 24, 0.617) solid;
 }
 .header2_box{
    gap: 40px;
@@ -32,6 +31,10 @@
     font-size: 16px;
     line-height: 22px;
     color: #000000;
+}
+
+.header2_box p:hover{
+    text-decoration:underline;
 }
 
 .header_panel{

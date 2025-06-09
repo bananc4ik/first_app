@@ -6,7 +6,7 @@ const Header = () =>{
 
     const exitHeader1 = () =>{
         let exitHeader = document.getElementById("header_box1");
-        exitHeader.style.display = 'none';
+        exitHeader.style.visibility = '';
         
     }
 
