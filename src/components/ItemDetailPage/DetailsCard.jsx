@@ -4,7 +4,7 @@ import right from "../../images/itemDetailPage/Vector(2).svg";
 import DetailsCardStyles from "./DetailsCard.css";
 import plusImage from "../../images/itemDetailPage/plus.svg";
 import minusImage from "../../images/itemDetailPage/minus.svg";
-import Reviews from "./Reviews";
+import Switch from "./Switch";
 
 const DetailsCard = ({ product }) => {
   const [count, setCount] = useState(0);
@@ -160,7 +160,7 @@ const DetailsCard = ({ product }) => {
           
         </div> */}
 
-        <Reviews />
+        <Switch />
     </div>
   );
 };

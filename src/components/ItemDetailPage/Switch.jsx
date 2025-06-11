@@ -2,7 +2,8 @@ import react from "react";
 import { useState } from "react";
 import Faqs from "./Faqs";
 import { Button } from "bootstrap";
-const Reviews = () => {
+import SwitchStyle from './Switch.css'
+const Switch = () => {
 
   const [click, setClick] = useState(0);
 
@@ -13,6 +14,9 @@ const Reviews = () => {
 
         break;
       case 3:
+        let RatingReviews = document.getElementById("rating_button");
+       
+        
         return <Faqs />
         break;
 
@@ -28,19 +32,19 @@ const Reviews = () => {
 
 
 
-        <button onClick={() => setClick(1)}>
+        <button className="col-4 switch_button" onClick={() => setClick(1)}>
           <p>Product Detail</p>
-          <hr />
+          
         </button>
 
-        <button onClick={() => setClick(2)}>
+        <button className="col-4 switch_button" onClick={() => setClick(2)}>
           <p>Rating & Reviews</p>
-          <hr />
+          
         </button>
 
-        <button onClick={() => setClick(3)}>
+        <button id="rating_button" className="col-4 switch_button" onClick={() => setClick(3)}>
           <p>FAQs</p>
-          <hr />
+          
         </button>
       </div>
 
@@ -59,4 +63,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Switch;
