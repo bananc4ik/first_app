@@ -3,7 +3,8 @@ import { useState } from "react";
 import Faqs from "./Faqs";
 import { Button } from "bootstrap";
 import SwitchStyle from './Switch.css'
-const Switch = () => {
+import ReviewDetail from "./ReviewsDetail";
+const Switch = ({product}) => {
 
   const [click, setClick] = useState(0);
 
@@ -11,6 +12,9 @@ const Switch = () => {
     switch (click) {
       case 0:
         return <Faqs />
+
+      case 2:
+        return <ReviewDetail product={product}/>
 
         break;
       case 3:

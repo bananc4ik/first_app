@@ -160,7 +160,7 @@ const DetailsCard = ({ product }) => {
           
         </div> */}
 
-        <Switch />
+        <Switch product={product} />
     </div>
   );
 };

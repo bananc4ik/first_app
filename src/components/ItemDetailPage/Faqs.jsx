@@ -2,6 +2,10 @@ import react from "react";
 import Filter from "../../images/itemDetailPage/Filter.svg";
 import FaqsStyle from "./Faqs.css";
 import Arrow from "../../images/itemDetailPage/ArrovBottom.svg";
+
+
+
+
 const Faqs = () => {
   return (
     <div className="container-fluid">
