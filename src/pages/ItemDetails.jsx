@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../app/productSlice";
 import { useParams } from "react-router-dom";
+import { fetchReviews } from "../app/reviewsSlice";
 
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 const ItemDetails = () => {
@@ -16,9 +17,14 @@ const ItemDetails = () => {
   const productsList = useSelector((state) => state.products.productsList);
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     dispatch(fetchProducts());
   }, [dispatch]);
+
+  useEffect(() =>{
+    dispatch(fetchReviews());
+  },[dispatch])
+  // Это шоб отзывы загружались и было хорошо
 
   useEffect(() => {
     if (productsList.length > 0) {

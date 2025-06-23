@@ -8,6 +8,7 @@ import CasualTypesClothingMobile from '../../images/MainImages/CasualTypesClothi
 import FormalTypesClothingMobile from '../../images/MainImages/FormalTypesClothingMobile.svg';
 import PartylTypesClothingMobile from '../../images/MainImages/PartyTypesClothingMobile.svg';
 import GymTypeClothingMobile from '../../images/MainImages/GymTypesClothingMobile.svg';
+import { Link } from "react-router-dom";
 
 
 import  './TypesClothing.css';
@@ -24,7 +25,7 @@ const TypesClothing = () =>{
                     <div className="d-flex flex-lg-row flex-sm-column flex-column flex-wrap justify-content-lg-evenly align-items-center col-12 types_clothing">
                                         
 
-                        <img style={{paddingBottom: 20}} className="d-lg-block d-sm-none d-none col-lg-3" src={CasualTypesClothing} alt="TypeClothing" />
+                        <Link to={'/product_filter'}><img  style={{paddingBottom: 20}} className="d-lg-block d-sm-none d-none col-lg-3" src={CasualTypesClothing} alt="TypeClothing" /></Link> 
 
                         <img style={{paddingBottom: 20}}  className="col-lg-5 d-lg-block d-sm-none  d-none col-lg-3" src={FormalTypesClothing} alt="TypeClothing" />
                         

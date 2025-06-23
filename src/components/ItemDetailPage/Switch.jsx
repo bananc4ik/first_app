@@ -32,7 +32,7 @@ const Switch = ({product}) => {
 
   return (
     <div>
-      <div>
+      <div className="d-flex justify-content-center">
 
 
 

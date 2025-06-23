@@ -11,10 +11,14 @@
     background-repeat: no-repeat;
     background-position:10px;
     padding-left: 40px;
+    border: 2px rgba(228, 228, 228, 0.617)solid;
+    border-style: none;
+
 
 }
 
-#header_input:hover{
+#header_input:focus{
+    outline: none;
     border: 2px rgba(24, 24, 24, 0.617) solid;
 }
 .header2_box{

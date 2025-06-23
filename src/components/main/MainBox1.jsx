@@ -17,7 +17,7 @@ const MainBox1 = () =>{
 
 
 
-                <div className="d-flex flex-column  MainBox1_1 ps-xl-5 ps-lg-2 col-xl-6 col-lg-12">
+                <div className="d-flex flex-column   MainBox1_1 ps-xl-5 ps-lg-2 col-xl-6 col-lg-12">
 
                     <p className="col-lg-9 MainBox1_title">FIND CLOTHES <br /> THAT MATCHES <br /> YOUR STYLE</p>
                     <p className="col-lg-5 MainBox1_description">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>

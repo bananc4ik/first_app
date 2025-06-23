@@ -26,7 +26,7 @@ const ProductsListTopSelling = () =>{
             
             {productsFromApi.slice(5,9).map((product) => (
                                 
-                <Link style={{textDecoration:"none"}} className="col-3" to="/item_detail" ><ProductComponent  key={product.id }product={product} /></Link>
+                <Link style={{textDecoration:"none"}} className="col-3" to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
                                 
             ))}
 

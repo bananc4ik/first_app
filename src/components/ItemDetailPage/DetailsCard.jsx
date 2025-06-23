@@ -7,7 +7,7 @@ import minusImage from "../../images/itemDetailPage/minus.svg";
 import Switch from "./Switch";
 
 const DetailsCard = ({ product }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const ProductPlus = () => {
     if (count < 12) {
@@ -18,7 +18,7 @@ const DetailsCard = ({ product }) => {
   };
 
   const ProductMinus = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     } else {
       console.log("ERROR");
@@ -26,8 +26,8 @@ const DetailsCard = ({ product }) => {
   };
 
   return (
-    <div className="   detail_box">
-      <div className="d-flex gap-3 ps-5 pt-4">
+    <div className=" col-12   detail_box">
+      <div className="d-flex gap-3 ps-lg-5 ps-sm-0 pt-4">
         <p className="minor_path">Products</p>
         <img src={right} alt="" />
         <p className="minor_path">Сlothes</p>
@@ -65,12 +65,11 @@ const DetailsCard = ({ product }) => {
               <div className="d-flex flex-row">
                 {product.discount > 0 ? (
                   <div className="d-flex flex-row" style={{ gap: 10 }}>
-                    <p className="product_price">{product.price + "₽"}</p>
+                    <p className="product_price">{product.price * count  -
+                        ((product.price * product.discount) / 100).toFixed(1)}</p>
 
                     <p className="product_price_with_discount">
-                      {product.price -
-                        ((product.price * product.discount) / 100).toFixed(2)}
-                      ₽
+                      {(product.price * count).toFixed(1) + "₽"}
                     </p>
                     <p className="product_discount_percent">
                       {product.discount + "%"}{" "}
@@ -120,13 +119,13 @@ const DetailsCard = ({ product }) => {
               </div>
               <hr />
 
-              <div className="col-12 d-flex gap-2">
+              <div className="col-11 d-flex gap-2">
                 <div className="col-6 col-xxl-4 col-md-5 d-flex justify-content-around  product_count_box">
-                  <button className="col-4" onClick={ProductMinus}>
+                  <button className="col-4 count_btn" onClick={ProductMinus}>
                     <img src={minusImage} alt="button-" />
                   </button>
                   <p className="col-1">{count}</p>
-                  <button className="col-4" onClick={ProductPlus}>
+                  <button className="col-4 count_btn" onClick={ProductPlus}>
                     <img src={plusImage} alt="button+" />
                   </button>
                 </div>
@@ -139,7 +138,7 @@ const DetailsCard = ({ product }) => {
           </div>
         </div>
 
-        
+
       </div>
       {/* <div className="col-12 d-flex justify-content-around detail_reviews_category ">
           
@@ -160,7 +159,7 @@ const DetailsCard = ({ product }) => {
           
         </div> */}
 
-        <Switch product={product} />
+      <Switch product={product} />
     </div>
   );
 };
