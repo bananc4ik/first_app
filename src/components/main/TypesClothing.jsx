@@ -25,23 +25,23 @@ const TypesClothing = () =>{
                     <div className="d-flex flex-lg-row flex-sm-column flex-column flex-wrap justify-content-lg-evenly align-items-center col-12 types_clothing">
                                         
 
-                        <Link to={'/product_filter'}><img  style={{paddingBottom: 20}} className="d-lg-block d-sm-none d-none col-lg-3" src={CasualTypesClothing} alt="TypeClothing" /></Link> 
+                        <Link className="col-lg-5 d-lg-block d-sm-none d-none"  to={'/product_filter'}><img  style={{paddingBottom: 20}} className="col-9" src={CasualTypesClothing} alt="TypeClothing" /></Link> 
 
-                        <img style={{paddingBottom: 20}}  className="col-lg-5 d-lg-block d-sm-none  d-none col-lg-3" src={FormalTypesClothing} alt="TypeClothing" />
+                        <Link className="col-lg-5 d-lg-block d-sm-none d-none"  to={'/product_filter'}><img style={{paddingBottom: 20}}  className="col-9" src={FormalTypesClothing} alt="TypeClothing" /></Link>
                         
-                        <img style={{paddingBottom: 76}} className="col-lg-5 d-lg-block d-sm-none d-none col-lg-3" src={PartylTypesClothing} alt="TypeClothing" />
+                        <Link className="col-lg-5 d-lg-block d-sm-none d-none"  to={'/product_filter'}><img style={{paddingBottom: 76}} className="col-9" src={PartylTypesClothing} alt="TypeClothing" /></Link>
                         
-                        <img style={{paddingBottom: 76}} className="col-lg-3  d-lg-block d-sm-none d-none col-lg-3 " src={GymTypeClothing} alt="TypeClothing" />
+                        <Link className="col-lg-5 d-lg-block d-sm-none d-none"  to={'/product_filter'}><img style={{paddingBottom: 76}} className="col-9" src={GymTypeClothing} alt="TypeClothing" /></Link>
 
                         {/* телефон */}
 
-                        <img style={{paddingBottom: 20}} className="col-8 d-lg-none d-sm-block" src={CasualTypesClothingMobile} alt="CasualTypesClothing" />
+                        <Link className="col-8 d-lg-none d-sm-block" to={'/product_filter'}><img style={{paddingBottom: 20}} className="col-12"  src={CasualTypesClothing} /></Link>
 
-                        <img style={{paddingBottom: 20}} className="col-8 d-lg-none d-sm-block" src={FormalTypesClothingMobile} alt="CasualTypesClothing" />
+                        <Link className="col-8 d-lg-none d-sm-block" to={'/product_filter'}><img style={{paddingBottom: 20}} className="col-12" src={FormalTypesClothingMobile} alt="CasualTypesClothing" /></Link>
 
-                        <img style={{paddingBottom: 20}} className="col-8 d-lg-none d-sm-block" src={PartylTypesClothingMobile} alt="CasualTypesClothing" />
+                        <Link className="col-8 d-lg-none d-sm-block" to={'/product_filter'}><img style={{paddingBottom: 20}} className="col-12" src={PartylTypesClothingMobile} alt="CasualTypesClothing" /></Link>
 
-                        <img style={{paddingBottom: 20}} className="col-8 d-lg-none d-sm-block" src={GymTypeClothingMobile} alt="CasualTypesClothing" />
+                        <Link className="col-8 d-lg-none d-sm-block" to={'/product_filter'}><img style={{paddingBottom: 20}} className="col-12" src={GymTypeClothingMobile} alt="CasualTypesClothing" /></Link>
 
 
                     </div>

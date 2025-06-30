@@ -2,7 +2,7 @@ import React from "react";
 import LatestOffersStyle from './LatestOffers.css'
 const LatestOffers = () =>{
     return(
-        <div className="container-fluid latest_offers_box">
+        <div className="container-fluid latest_offers_box" >
 
             <div className="row">
 

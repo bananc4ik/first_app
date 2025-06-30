@@ -1,0 +1,75 @@
+.filters{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+
+
+.filters_text{
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+.inputFilter{
+background: #000000;
+border-radius: 20px;
+
+
+
+}
+
+.filter_price{
+    background-color: #000000;
+    color: #000000;
+}
+
+
+
+
+.color_filter_element{
+
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 37px;
+    height: 37px;
+
+
+}
+
+#green{
+
+     background: #00C12B;
+     border: 2px solid #00C12B;
+
+}
+
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#pink{
+    background-color: pink;
+}
+
+#purple{
+    background-color: purple;
+}
+#blue{
+    background-color: blue;
+}
+
