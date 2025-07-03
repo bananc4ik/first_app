@@ -18,7 +18,7 @@ const getProducts = createSlice({
             state.productsList = action.payload;
             console.log(state.productsList);
             
-        })
+        });
     }
 })
 

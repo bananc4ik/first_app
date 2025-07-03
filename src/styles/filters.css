@@ -1,4 +1,4 @@
-.filters{
+.filters {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -9,9 +9,42 @@
     border-radius: 20px;
 }
 
+.details_categories > summary {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.details_categories > summary::after {
+    position: relative;
+    content: '▶';
+}
+
+.details_categorie[open] > summary::before {
+    content: '▼';
+    /* стрелка вниз */
+}
+
+.details_categories {
+    padding-bottom: 22.5px;
+}
 
 
-.filters_text{
+.categories_detail_filter {
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 0px;
+    gap: 20px;
+}
+
+
+
+.filters_text {
     font-family: 'Satoshi';
     font-style: normal;
     font-weight: 700;
@@ -23,15 +56,15 @@
 
 }
 
-.inputFilter{
-background: #000000;
-border-radius: 20px;
+.inputFilter {
+    background: #000000;
+    border-radius: 20px;
 
 
 
 }
 
-.filter_price{
+.filter_price {
     background-color: #000000;
     color: #000000;
 }
@@ -39,7 +72,7 @@ border-radius: 20px;
 
 
 
-.color_filter_element{
+.color_filter_element {
 
     box-sizing: border-box;
     border-radius: 25px;
@@ -49,27 +82,85 @@ border-radius: 20px;
 
 }
 
-#green{
+#green {
 
-     background: #00C12B;
-     border: 2px solid #00C12B;
+    background: #00C12B;
+    border: 2px solid #00C12B;
 
 }
 
-#red{
+#red {
     background-color: red;
 }
-#yellow{
+
+#yellow {
     background-color: yellow;
 }
-#pink{
+
+#pink {
     background-color: pink;
 }
 
-#purple{
+#purple {
     background-color: purple;
 }
-#blue{
+
+#blue {
     background-color: blue;
 }
 
+
+
+
+
+.colors_title {
+    position: relative;
+    bottom: 20px;
+    left: 12px;
+
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    display: flex;
+    color: #000000;
+
+}
+
+
+.filter_size_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 12px;
+    background: #F0F0F0;
+    border-radius: 62px;
+    cursor: pointer;
+
+
+}
+
+
+
+
+
+.apply_filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 54px;
+    gap: 12px;
+    background: #000000;
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+}

@@ -41,7 +41,7 @@ const Header2 = () =>{
 
                 <img className='col-lg-4 col-md-2' src={Header_ICON_SHOP1} alt="" />
 
-                <img className='col-lg-4 col-md-2' src={Header_Icon_Profile} alt="" />
+                <Link to={'/auth'} className='col-lg-4 col-md-2'><img className='col-12' src={Header_Icon_Profile} alt="" /></Link>
 
             </div>
             
