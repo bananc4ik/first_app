@@ -5,11 +5,8 @@ export const initialState = {
 
 export const fetchReviews = createAsyncThunk("/shopco/reviews", async () => {
 
-    let reviewsResponse = await fetch("https://jjwjw.wiremockapi.cloud/shopco/reviews");
+    let reviewsResponse = await fetch("http://localhost:3000/reviews");
     return await reviewsResponse.json();
-
-
-
 });
 
 const getReviews = createSlice({

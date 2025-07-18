@@ -4,7 +4,7 @@ export const initialState = {
 }
 
 export const fetchProducts = createAsyncThunk("/shopco/products",async () =>{
-    let productsResponse = await fetch("https://jjwjw.wiremockapi.cloud/shopco/products")
+    let productsResponse = await fetch("http://localhost:3000/products")
     return await productsResponse.json();
 }) 
 

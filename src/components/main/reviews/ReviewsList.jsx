@@ -46,13 +46,13 @@ const ReviewsList = () => {
                     <div className="d-flex justify-content-end ">
 
                         <div>
-                        
+
                             <button className="swiper_button_prev reviews_button"><img src={reviewsImageLeft} alt="" /></button>
                             <button className="swiper_button_next reviews_button"><img src={reviewsImageRight} alt="" /></button>
 
                         </div>
-                    
-                        
+
+
 
                     </div>
 
@@ -64,11 +64,11 @@ const ReviewsList = () => {
 
                         <Swiper
                             modules={[Navigation]}
-                            navigation = {{
+                            navigation={{
                                 nextEl: '.swiper_button_next',
                                 prevEl: '.swiper_button_prev',
                             }}
-                            
+
                             spaceBetween={20}
                             slidesPerView={3}
                             breakpoints={{

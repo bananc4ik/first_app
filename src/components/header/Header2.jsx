@@ -14,7 +14,7 @@ const Header2 = () =>{
 
             <div className='d-flex justify-content-between col-lg-1 d-flex'>
                 <img className='col-3 col-sm-3 d-lg-none d-md-block ' src={Menu} alt="menu" />
-                <Link to={`http://localhost:3000/`}><img className='col-lg-12 col-8 col-sm-8 d-lg-block d-md-block' src={HeaderLogo} alt="LOGO"/></Link>
+                <Link to={`/`}><img className='col-lg-12 col-8 col-sm-8 d-lg-block d-md-block' src={HeaderLogo} alt="LOGO"/></Link>
 
             </div>
             

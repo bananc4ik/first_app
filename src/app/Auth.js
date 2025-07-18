@@ -6,7 +6,7 @@ export const initialState = {
 
 export const fetchAuth = createAsyncThunk("/shopco/auth",async () =>{
 
-    let authresponse = await fetch("https://jjwjw.wiremockapi.cloud/shopco/auth")
+    let authresponse = await fetch("http://localhost:3000/users")
     return await authresponse.json();
 
 })

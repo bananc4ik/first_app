@@ -22,11 +22,11 @@ const ProductsListTopSelling = () =>{
 
             <p className=" text-center newarrivals">TOP SELLING</p>
 
-            <div className="d-flex container-fluid  align-items-center justify-content-center">
+            <div className="d-flex container-fluid flex-lg-row gap-lg-0 gap-3 flex-column  align-items-center justify-content-center">
             
             {productsFromApi.slice(5,9).map((product) => (
                                 
-                <Link style={{textDecoration:"none"}} className="col-3" to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
+                <Link style={{textDecoration:"none"}} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
                                 
             ))}
 

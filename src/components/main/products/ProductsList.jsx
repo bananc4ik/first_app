@@ -10,6 +10,8 @@ const ProductsList = () =>{
 
     const productsFromApi = useSelector((state) => state.products.productsList);
 
+    
+
     useEffect(() => {
             dispatch(fetchProducts());
     
@@ -22,11 +24,11 @@ const ProductsList = () =>{
 
             <p className=" text-center newarrivals">NEW ARRIVALS</p>
 
-            <div className="d-flex container-fluid  align-items-center justify-content-center">
+            <div className="d-flex flex-lg-row gap-lg-0 gap-3 flex-column container-fluid  align-items-center justify-content-center">
             
             {productsFromApi.slice(0,4).map((product) => (
                                 
-                <Link style={{textDecoration:"none"}} className="col-3"   to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
+                <Link style={{textDecoration:"none"}} className="col-lg-3 col-8"   to={`/item_detail/${product.id}`}><ProductComponent  key={product.id }product={product} /></Link>
                                 
             ))}
 
