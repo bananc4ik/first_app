@@ -60,7 +60,11 @@ const ProductFilter = () => {
     const [sizeFilter, setSizeFilter] = useState(" ");
 
 
-    let filteredProducts = [];
+    let [filteredProducts, setFilteredProducts] = useState(productsFromApi);
+
+    useEffect(() => {
+        setFilteredProducts(productsFromApi);
+    }, [productsFromApi]);
 
     let filters = {
         size: "",
@@ -72,26 +76,7 @@ const ProductFilter = () => {
         filters.size = sizeFilter;
         console.log(filters.size);
 
-        productsFromApi.forEach(product => {
-
-            if (product.availableSizes.includes(sizeFilter)) {
-                console.log(product);
-                filteredProducts.push(product)
-
-
-
-            } else {
-                console.log("Product is not found!");
-
-            }
-
-
-
-
-        });
-
-
-        console.log(productsFromApi);
+        setFilteredProducts(productsFromApi.filter((product) => product.availableSizes.includes(filters.size)));
 
 
 
@@ -306,7 +291,7 @@ const ProductFilter = () => {
 
 
                         <div className="col-12">
-                            <button onClick={updateFilters()} className="col-12 apply_filters">Apply Filter</button>
+                            <button onClick={updateFilters} className="col-12 apply_filters">Apply Filter</button>
                         </div>
 
 
