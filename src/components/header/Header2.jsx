@@ -12,7 +12,7 @@ const Header2 = () =>{
         
         <div className='d-flex align-items-center justify-content-sm-between justify-content-between header2_box'>
 
-            <div className='d-flex justify-content-between col-lg-1 d-flex'>
+            <div className='d-flex justify-content-between align-items-center col-lg-1 d-flex'>
                 <img className='col-3 col-sm-3 d-lg-none d-md-block ' src={Menu} alt="menu" />
                 <Link to={`/`}><img className='col-lg-12 col-8 col-sm-8 d-lg-block d-md-block' src={HeaderLogo} alt="LOGO"/></Link>
 
@@ -24,7 +24,7 @@ const Header2 = () =>{
                     <p>Shop</p>
                     <img src={HeaderListImage} alt="" />
                 </div>
-                            
+                
                 <p>On Sale</p> 
                 <p>New Arrivals</p>
                 <p>Brands</p>
@@ -39,7 +39,7 @@ const Header2 = () =>{
 
                 <img className='d-lg-none d-md-block col-lg-4 col-md-2 ' src={Header_Search} alt="" />
 
-                <img className='col-lg-4 col-md-2' src={Header_ICON_SHOP1} alt="" />
+                <Link className='col-lg-4 col-md-2' to={'/basket'}><img className='col-12'  src={Header_ICON_SHOP1} alt="" /></Link>
 
                 <Link to={'/auth'} className='col-lg-4 col-md-2'><img className='col-12' src={Header_Icon_Profile} alt="" /></Link>
 

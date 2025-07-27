@@ -36,7 +36,7 @@ const ItemDetails = () => {
   if (!product) {
     return <div className="col-12 d-flex justify-content-center pt-5">
 
-      <DotLottieReact className="col-2  " src="https://lottie.host/41701306-909d-429d-b8d4-d975e111345a/5JQym8Sw27.lottie" loop autoplay />
+      <DotLottieReact className="col-2" src="https://lottie.host/41701306-909d-429d-b8d4-d975e111345a/5JQym8Sw27.lottie" loop autoplay />
       </div>
 
   }
@@ -45,7 +45,7 @@ const ItemDetails = () => {
     <div>
       <Header />
       <Header2 />
-      <DetailsCard product={product} />
+      <DetailsCard product={product}/>
       <LatestOffers />
       <Footer />
     </div>

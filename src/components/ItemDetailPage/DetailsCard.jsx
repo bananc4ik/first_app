@@ -25,6 +25,16 @@ const DetailsCard = ({ product }) => {
     }
   };
 
+  const saveProductId = () => {
+    // localStorage.removeItem("productIds") 
+    const storedIds = JSON.parse(localStorage.getItem("productIds")) || [];
+    if (!storedIds.includes(product.id)) {
+      const updatedIds = [...storedIds, product.id];
+      localStorage.setItem("productIds", JSON.stringify(updatedIds));
+    }
+    
+  };
+
   return (
     <div className=" col-12   detail_box">
       <div className="d-flex gap-3 ps-lg-5 ps-sm-0 pt-4">
@@ -65,8 +75,8 @@ const DetailsCard = ({ product }) => {
               <div className="d-flex flex-row">
                 {product.discount > 0 ? (
                   <div className="d-flex flex-row" style={{ gap: 10 }}>
-                    <p className="product_price">{product.price * count  -
-                        ((product.price * product.discount) / 100).toFixed(1)}</p>
+                    <p className="product_price">{product.price * count -
+                      ((product.price * product.discount) / 100).toFixed(1)}</p>
 
                     <p className="product_price_with_discount">
                       {(product.price * count).toFixed(1) + "₽"}
@@ -129,10 +139,15 @@ const DetailsCard = ({ product }) => {
                     <img src={plusImage} alt="button+" />
                   </button>
                 </div>
+                {/* deddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */}
 
-                <button className="col-6 col-xxl-7 col-md-6 add_to_cart_button">
+
+
+
+                <button onClick={saveProductId} className="col-6 col-xxl-7 col-md-6 add_to_cart_button">
                   Add to Cart
                 </button>
+
               </div>
             </div>
           </div>
