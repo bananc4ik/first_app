@@ -24,13 +24,22 @@ const DetailsCard = ({ product }) => {
       console.log("ERROR");
     }
   };
+  
+  const [setSaveSize,SaveSize] = useState("");
+
+  
 
   const saveProductId = () => {
     // localStorage.removeItem("productIds") 
-    const storedIds = JSON.parse(localStorage.getItem("productIds")) || [];
-    if (!storedIds.includes(product.id)) {
-      const updatedIds = [...storedIds, product.id];
-      localStorage.setItem("productIds", JSON.stringify(updatedIds));
+    const saveProduct = {
+      size:SaveSize,
+      name:product.name
+    };
+ 
+    const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];
+    if (!basket.includes(saveProduct)) {
+      const updateBasket = [...basket, saveProduct];
+      localStorage.setItem("basketDetails",updateBasket)
     }
     
   };
@@ -107,20 +116,20 @@ const DetailsCard = ({ product }) => {
                 {product.availableSizes.map((size) => {
                   switch (size) {
                     case "M":
-                      return <p className="col-2 sizes">Medium</p>;
+                      return <p onClick={() => setSaveSize("Medium")} className="col-2 sizes">Medium</p>;
                       break;
 
                     case "S":
-                      return <p className="col-2 sizes">Small</p>;
+                      return <p onClick={() => setSaveSize("Small")} className="col-2 sizes">Small</p>;
 
                     case "L":
-                      return <p className="col-2 sizes">Large</p>;
+                      return <p onClick={() => setSaveSize("Large")} className="col-2 sizes">Large</p>;
 
                     case "XL":
-                      return <p className="col-3 sizes">X-Large</p>;
+                      return <p onClick={() => setSaveSize("X-Large")} className="col-3 sizes">X-Large</p>;
 
                     case "XXL":
-                      return <p className="col-3 sizes">XX-Large</p>;
+                      return <p onClick={() => setSaveSize("XX-Large")} className="col-3 sizes">XX-Large</p>;
                     default:
                       break;
                   }

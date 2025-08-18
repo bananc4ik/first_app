@@ -7,6 +7,7 @@ import { fetchProducts } from "../app/productSlice";
 import { useEffect } from "react";
 import ProductComponent from "../components/main/products/ProductComponent";
 import { Link } from "react-router-dom"
+import ProductBasketComponent from "../components/basket/ProductBasketComponent";
 
 
 
@@ -17,11 +18,11 @@ const Basket = () => {
     const productsFromApi = useSelector((state) => state.products.productsList);
 
     
-  const [productsBasket, setProductsBasket] = useState([]);
+     const [productsBasket, setProductsBasket] = useState([]);
 
 
 
-    const busketItems = localStorage.getItem("productIds")
+    const busketItems = localStorage.getItem("basket")
     console.log(busketItems);
 
     useEffect(() => {
@@ -29,10 +30,10 @@ const Basket = () => {
 
     }, [dispatch]);
 
-    useEffect(() => {
-        if (busketItems != null) setProductsBasket(productsFromApi.filter(product => busketItems.includes(product.id)));
-
-    }, [productsFromApi]);
+    // useEffect(() => {
+    //     if (busketItems != null) setProductsBasket(productsFromApi.filter(product => busketItems.includes(product.id)));
+     
+    // }, [productsFromApi]);
 
 
 
@@ -52,24 +53,38 @@ const Basket = () => {
 
 
 
-                <div className="basket_box">
+                <div className="col-12 basket_box">
 
-                    <p className="basket_title">Your cart</p>
+                    <p className="col-3 basket_title">Your cart</p>
 
                     <div className="basket_products">
 
                         {productsBasket.map((product) => (
 
-                            <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
+                            // <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
+                            <div className="col-7">
 
+                                <div>
+                                    <img className="col-2" src={product.image} alt="" />
+                                </div>
+
+                                <div>
+                                    <p>{product.name}</p>
+                                    <p>Size:product.id.</p>
+                                </div>
+
+                            </div>
                         ))}
                     </div>
 
-                    <div className="basket_options">
+
+                </div>
+
+                <ProductBasketComponent/>
 
 
 
-                    </div>
+                <div>
 
                 </div>
 
