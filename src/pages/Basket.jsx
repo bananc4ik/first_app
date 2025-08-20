@@ -22,7 +22,7 @@ const Basket = () => {
 
 
 
-    const busketItems = localStorage.getItem("basket")
+    const busketItems = localStorage.getItem("basketDetails")
     console.log(busketItems);
 
     useEffect(() => {
@@ -59,7 +59,7 @@ const Basket = () => {
 
                     <div className="basket_products">
 
-                        {productsBasket.map((product) => (
+                        {productsBasket.map((product, index) => (
 
                             // <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
                             <div className="col-7">
@@ -68,7 +68,7 @@ const Basket = () => {
                                     <img className="col-2" src={product.image} alt="" />
                                 </div>
 
-                                <div>
+                                <div key={index}>
                                     <p>{product.name}</p>
                                     <p>Size:product.id.</p>
                                 </div>

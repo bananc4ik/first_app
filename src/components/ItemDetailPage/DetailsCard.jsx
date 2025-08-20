@@ -24,24 +24,30 @@ const DetailsCard = ({ product }) => {
       console.log("ERROR");
     }
   };
-  
-  const [setSaveSize,SaveSize] = useState("");
 
-  
+  const [SaveSize, setSaveSize] = useState("");
+
+  // localStorage.removeItem("basketDetails") 
 
   const saveProductId = () => {
-    // localStorage.removeItem("productIds") 
-    const saveProduct = {
-      size:SaveSize,
-      name:product.name
-    };
- 
-    const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];
-    if (!basket.includes(saveProduct)) {
-      const updateBasket = [...basket, saveProduct];
-      localStorage.setItem("basketDetails",updateBasket)
-    }
     
+    const saveProduct = {
+      id: product.id,
+      name: product.name,
+      size: SaveSize,
+    };
+
+    const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];
+
+
+    const exists = basket.find(
+      (item) => item.id === saveProduct.id && item.size === saveProduct.size
+    );
+    if (!exists) {
+      const updateBasket = [...basket, saveProduct];
+      localStorage.setItem("basketDetails", JSON.stringify(updateBasket));
+    }
+
   };
 
   return (
