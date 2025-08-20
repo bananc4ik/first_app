@@ -4,6 +4,7 @@ import Faqs from "./Faqs";
 import { Button } from "bootstrap";
 import SwitchStyle from './Switch.css'
 import ReviewDetail from "./ReviewsDetail";
+import DetailsProduct from "./DetailsProduct";
 const Switch = ({product}) => {
 
   const [click, setClick] = useState(0);
@@ -12,6 +13,9 @@ const Switch = ({product}) => {
     switch (click) {
       case 0:
         return <Faqs />
+
+      case 1:
+        return <DetailsProduct product={product}/>
 
       case 2:
         return <ReviewDetail product={product}/>
