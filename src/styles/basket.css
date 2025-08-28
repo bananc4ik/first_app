@@ -1,3 +1,14 @@
+.basket_products_box{
+    box-sizing: border-box;
+    padding: 20px 24px;
+    gap: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+
+}
+
+
 .basket_title{
 
     font-family: 'Integral CF';
@@ -8,6 +19,35 @@
     display: flex;
     align-items: center;
     color: #000000;
+    
 
 
+}
+
+
+.basket_product_name{
+    padding-top: 23px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+
+}
+
+
+.basket_product_price{
+
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;   
+    padding-top:15px;
+}
+
+.basket_product_delete_product{
+    padding-top: 23px;
 }

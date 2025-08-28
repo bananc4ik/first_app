@@ -30,11 +30,15 @@ const DetailsCard = ({ product }) => {
   // localStorage.removeItem("basketDetails") 
 
   const saveProductId = () => {
+    console.log(SaveSize);
     
     const saveProduct = {
       id: product.id,
       name: product.name,
       size: SaveSize,
+      image: product.image,
+      price: product.price,
+      discount: product.discount,
     };
 
     const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];

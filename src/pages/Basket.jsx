@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import ProductComponent from "../components/main/products/ProductComponent";
 import { Link } from "react-router-dom"
 import ProductBasketComponent from "../components/basket/ProductBasketComponent";
+import BusketDeleteFrom from "../images/Basket/basket_delete.svg"
 
 
 
@@ -17,13 +18,17 @@ const Basket = () => {
 
     const productsFromApi = useSelector((state) => state.products.productsList);
 
-    
-     const [productsBasket, setProductsBasket] = useState([]);
+
+    const [productsBasket, setProductsBasket] = useState([]);
 
 
 
     const busketItems = localStorage.getItem("basketDetails")
     console.log(busketItems);
+
+    useEffect(() => {
+        setProductsBasket(JSON.parse(busketItems));
+    }, [busketItems])
 
     useEffect(() => {
         dispatch(fetchProducts());
@@ -32,8 +37,12 @@ const Basket = () => {
 
     // useEffect(() => {
     //     if (busketItems != null) setProductsBasket(productsFromApi.filter(product => busketItems.includes(product.id)));
-     
+
     // }, [productsFromApi]);
+
+    // const DeleteProductFromBasket = () =>{
+        
+    // }
 
 
 
@@ -62,16 +71,57 @@ const Basket = () => {
                         {productsBasket.map((product, index) => (
 
                             // <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
-                            <div className="col-7">
+                            <div className="basket_products_box col-7">
 
-                                <div>
-                                    <img className="col-2" src={product.image} alt="" />
-                                </div>
 
-                                <div key={index}>
-                                    <p>{product.name}</p>
-                                    <p>Size:product.id.</p>
+
+                                <div className="col-12 d-flex" key={index}>
+                                    <div className="col-2">
+                                        <Link to={`/item_detail/${product.id}`}><img className="col-12" src={product.image} alt="" /></Link>
+                                    </div>
+
+                                    <div className="col-10 justify-content-between">
+
+                                        <div className="col-12 d-flex align-items-center justify-content-between ">
+                                            <p className="basket_product_name">{product.name}</p>
+                                            <div className="col-1">
+                                                <button onClick={() => localStorage.removeItem("basketDetails",product.id)}><img className="col-3 basket_product_delete_product" src={BusketDeleteFrom} alt="" /></button>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <p>Size:{product.size}</p>
+
+                                        <p>color</p>
+
+                                        <div>
+
+                                            {product.discount > 0 ? (
+
+                                                <p className="basket_product_price">{((product.price * product.discount) / 100).toFixed(2) + "$"}</p>
+
+                                            ) : (
+
+                                                <p className="basket_product_price">{(product.price).toFixed(1) + "₽"}</p>
+                                            )}
+
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+
+
+
                                 </div>
+                                <hr className="col-12" />
+
 
                             </div>
                         ))}
@@ -80,7 +130,7 @@ const Basket = () => {
 
                 </div>
 
-                <ProductBasketComponent/>
+                <ProductBasketComponent />
 
 
 
