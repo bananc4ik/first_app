@@ -39,6 +39,7 @@ const DetailsCard = ({ product }) => {
       image: product.image,
       price: product.price,
       discount: product.discount,
+      count: 0,
     };
 
     const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];
@@ -50,6 +51,7 @@ const DetailsCard = ({ product }) => {
     if (!exists) {
       const updateBasket = [...basket, saveProduct];
       localStorage.setItem("basketDetails", JSON.stringify(updateBasket));
+
     }
 
   };

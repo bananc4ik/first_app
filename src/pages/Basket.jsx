@@ -20,6 +20,10 @@ const Basket = () => {
 
 
     const [productsBasket, setProductsBasket] = useState([]);
+    
+    const [Subtotal,setSubtotal] = useState(0);
+
+
 
 
 
@@ -27,7 +31,10 @@ const Basket = () => {
     console.log(busketItems);
 
     useEffect(() => {
-        setProductsBasket(JSON.parse(busketItems));
+        setProductsBasket(JSON.parse(busketItems)); 
+        
+        setSubtotal(productsBasket.reduce((sum,product) => sum + product.price,0));
+
     }, [busketItems])
 
     useEffect(() => {
@@ -35,13 +42,27 @@ const Basket = () => {
 
     }, [dispatch]);
 
+    
+    console.log(Subtotal);
+
+
+
     // useEffect(() => {
     //     if (busketItems != null) setProductsBasket(productsFromApi.filter(product => busketItems.includes(product.id)));
 
     // }, [productsFromApi]);
 
     // const DeleteProductFromBasket = () =>{
-        
+
+    // }
+
+
+    // const a = 0
+    // const plusAndMinusBusket = () => {
+    //     a+=1
+
+    //     setProductCount()
+
     // }
 
 
@@ -57,80 +78,38 @@ const Basket = () => {
             <Header />
             <Header2 />
 
-            <div className="row">
+            <div className="d-flex">
 
 
 
 
-                <div className="col-12 basket_box">
+                <div className="col-6 basket_box">
 
-                    <p className="col-3 basket_title">Your cart</p>
+                    <p className="col-12 basket_title">Your cart</p>
 
                     <div className="basket_products">
 
                         {productsBasket.map((product, index) => (
 
                             // <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
-                            <div className="basket_products_box col-7">
+                            <div className="basket_products_box col-12">
+
+                                <ProductBasketComponent product={product} />
+                                
 
 
 
-                                <div className="col-12 d-flex" key={index}>
-                                    <div className="col-2">
-                                        <Link to={`/item_detail/${product.id}`}><img className="col-12" src={product.image} alt="" /></Link>
-                                    </div>
-
-                                    <div className="col-10 justify-content-between">
-
-                                        <div className="col-12 d-flex align-items-center justify-content-between ">
-                                            <p className="basket_product_name">{product.name}</p>
-                                            <div className="col-1">
-                                                <button onClick={() => localStorage.removeItem("basketDetails",product.id)}><img className="col-3 basket_product_delete_product" src={BusketDeleteFrom} alt="" /></button>
-                                            </div>
-
-
-                                        </div>
-
-
-                                        <p>Size:{product.size}</p>
-
-                                        <p>color</p>
-
-                                        <div>
-
-                                            {product.discount > 0 ? (
-
-                                                <p className="basket_product_price">{((product.price * product.discount) / 100).toFixed(2) + "$"}</p>
-
-                                            ) : (
-
-                                                <p className="basket_product_price">{(product.price).toFixed(1) + "₽"}</p>
-                                            )}
-
-                                        </div>
-
-
-
-
-
-
-                                    </div>
-
-
-
-
-                                </div>
-                                <hr className="col-12" />
 
 
                             </div>
+                            
                         ))}
                     </div>
 
 
                 </div>
 
-                <ProductBasketComponent />
+
 
 
 
@@ -138,7 +117,20 @@ const Basket = () => {
 
                 </div>
 
+                <div className="total_basket col-5">
+                    <p className="total_baske_title">Order Summary</p>
+
+                    <div className="total_baske_prices">
+                        <div className="d-flex">
+                            <p>Subtotal:</p>
+                            <p>{Subtotal}</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
 
         </div>
 

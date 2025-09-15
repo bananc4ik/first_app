@@ -39,9 +39,9 @@ const Header2 = () =>{
 
                 <img className='d-lg-none d-md-block col-lg-4 col-md-2 ' src={Header_Search} alt="" />
 
-                <Link className='col-lg-4 col-md-2' to={'/basket'}><img className='col-12'  src={Header_ICON_SHOP1} alt="" /></Link>
+                <Link className='col-lg-3 col-md-2' to={'/basket'}><img className='col-12'  src={Header_ICON_SHOP1} alt="" /></Link>
 
-                <Link to={'/auth'} className='col-lg-4 col-md-2'><img className='col-12' src={Header_Icon_Profile} alt="" /></Link>
+                <Link to={'/auth'} className='col-lg-3 col-md-2'><img className='col-12' src={Header_Icon_Profile} alt="" /></Link>
 
             </div>
             

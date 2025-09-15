@@ -51,3 +51,44 @@
 .basket_product_delete_product{
     padding-top: 23px;
 }
+
+.busket_buton{
+    background: none;
+    border-style: none;
+}
+
+
+.productBasketdelete{
+    padding: 12px 20px;
+    gap: 20px;
+    background: #F0F0F0;
+    border-radius: 62px;
+
+}
+
+.productBasketdeleteMinusPlus{
+    background: none;
+    border: none;
+}
+
+.total_basket{
+    padding: 20px 24px;
+    gap: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 46px;
+
+}
+
+.total_baske_title{
+
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
