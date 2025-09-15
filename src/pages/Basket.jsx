@@ -20,30 +20,54 @@ const Basket = () => {
 
 
     const [productsBasket, setProductsBasket] = useState([]);
-    
-    const [Subtotal,setSubtotal] = useState(0);
+
+    const [Subtotal, setSubtotal] = useState(0);
 
 
 
 
 
-    const busketItems = localStorage.getItem("basketDetails")
+    const busketItems = localStorage.getItem("basketDetails");
     console.log(busketItems);
 
+    // Basket.jsx
     useEffect(() => {
-        setProductsBasket(JSON.parse(busketItems)); 
-        
-        setSubtotal(productsBasket.reduce((sum,product) => sum + product.price,0));
+        const basket = JSON.parse(localStorage.getItem("basketDetails")) || [];
+        setProductsBasket(basket);
+    }, []);
 
-    }, [busketItems])
+
+    useEffect(() => {
+        setSubtotal(
+            productsBasket.reduce(
+                (sum, product) => sum + product.price * (product.count || 1),
+                0
+            )
+        );
+        localStorage.setItem("basketDetails", JSON.stringify(productsBasket));
+    }, [productsBasket]);
+
 
     useEffect(() => {
         dispatch(fetchProducts());
 
     }, [dispatch]);
 
-    
+
     console.log(Subtotal);
+
+    const updateProductCount = (id, newCount) => {
+        setProductsBasket((prev) =>
+            prev.map((p) =>
+                p.id === id ? { ...p, count: Math.max(newCount, 0) } : p
+            )
+        );
+    };
+
+    // Удаление продукта
+    const deleteProduct = (id) => {
+        setProductsBasket((prev) => prev.filter((p) => p.id !== id));
+    };
 
 
 
@@ -94,15 +118,16 @@ const Basket = () => {
                             // <Link style={{ textDecoration: "none" }} className="col-lg-3 col-8" to={`/item_detail/${product.id}`}><ProductComponent key={product.id} product={product} /></Link>
                             <div className="basket_products_box col-12">
 
-                                <ProductBasketComponent product={product} />
-                                
+                                <ProductBasketComponent product={product} onUpdateCount={updateProductCount}
+                                    onDelete={deleteProduct} />
+
 
 
 
 
 
                             </div>
-                            
+
                         ))}
                     </div>
 
